@@ -7,7 +7,7 @@ use App\Http\Requests\RegisterUserRequest;
 use App\Http\Resources\UserResource;
 use App\Services\User\AuthService;
 use App\Utils\ApiResponser;
-use Illuminate\Http\Request;
+
 
 class UserController extends Controller
 {
@@ -26,6 +26,6 @@ class UserController extends Controller
 
         //return response
         return ApiResponser::success($user);
-        
+
     }
 }
