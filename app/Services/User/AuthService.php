@@ -12,11 +12,13 @@ class AuthService{
 
     public function register(UserRegisterDTO $data)
     {
-        // Check if the email already exists. 
+
         // We could also check this in validation, but here we do it in the service for learning purposes.
         if($this->userRepository->findByEmail($data->email)){
             throw new AppException(config('messages.email_exists'));
         }
+
+        //other logics
 
         return $this->userRepository->create($data);
 
