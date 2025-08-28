@@ -14,7 +14,7 @@ class RegisterUserRequest extends FormRequest
                 'email'
             ],
             'name'=>[
-                'sometimes',
+                'required',
                 'string',
                 'min:3'
             ],
