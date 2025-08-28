@@ -53,9 +53,7 @@ public function register(RegisterUserRequest $request)
 ## 🛠️ Tech Stack
 - **Laravel 12**
 - **PHP 8.2+**
-- **MySQL / PostgreSQL**
 - **SOLID Principles**
-
 ---
 
 
@@ -72,7 +70,7 @@ Contributions are welcome!
 ---
 
 ## 📜 License
-This project is open-source and available under the [MIT License](LICENSE).  
+This project is open-source and available under the [MIT License]().  
 
 ---
 
