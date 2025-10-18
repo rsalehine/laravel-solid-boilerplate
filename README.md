@@ -1,12 +1,13 @@
-# Laravel Boilerplate  🚀  
+# Laravel Boilerplate 🚀
 
-A **production-ready Laravel Starter Kit** built with **SOLID principles** and a clean architecture.  
+A **production-ready Laravel Starter Kit with Docker support** built with **SOLID principles** and a clean architecture. 
 This starter kit helps you kickstart scalable, maintainable applications with **best practices from day one**.  
 
 ---
 
 ## ✨ Features
 - ✅ Pre-configured **SOLID architecture**
+- ✅ Ready-to-use **Docker setup** for fast local development
 - ✅ **Repository & Service layers** for clean code separation
 - ✅ **DTOs & Transformers** for structured responses
 - ✅ Ready-to-use **API scaffolding** 
@@ -24,6 +25,33 @@ cp .env.example .env
 php artisan key:generate
 php artisan migrate
 php artisan serve
+```
+
+---
+
+## 🐳 Development With Docker
+This project is fully Dockerized. You don’t need PHP, Composer, MySQL, or Redis installed on your host 
+
+### Start the containers
+```bash
+docker compose up -d --build
+```
+#### Containers included
+```bash
+app   → PHP-FPM (Laravel backend)
+web   → Nginx (serves app on port 8080)
+db    → MySQL 8.0
+redis → Redis for cache/queue
+```
+### Install dependencies
+```bash
+docker compose exec app composer install
+docker compose exec app npm install
+docker compose exec app npm run dev
+```
+##### Always run Composer inside the container
+```bash
+docker compose exec app composer require vendor/package
 ```
 
 ---
